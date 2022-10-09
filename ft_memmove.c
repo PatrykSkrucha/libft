@@ -18,10 +18,10 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	return ((void *)dest_ptr);
 }
 
-int main()
-{
-	char a[] = "abcde";
-	puts(a);
-	memmove(a, a+2, 3);
-	puts(a);
-}
+// int main()
+// {
+// 	char a[] = "abcde";
+// 	puts(a);
+// 	memmove(a, a+2, 3);
+// 	puts(a);
+// }
