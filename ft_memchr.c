@@ -6,30 +6,29 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:49:45 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/08 16:40:49 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/09 14:27:53 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-void *ft_memchr(const void *str, int c, size_t n)
+#include "libc.h"
+
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-    size_t i;
-    char* ptr;
+	size_t		i;
+	const char	*ptr;
 
-    ptr = (char*)str;
-    i = 0;
-    if( *ptr == '\0')
-        return (NULL);
-    while(ptr[i] != '\0' && i < n)
-    {
-        if (ptr[i] == c)
-            return ((void *)ptr+i);
-        i++;
-    }
-    return (NULL);
+	ptr = (char *)str;
+	i = 0;
+	if (*ptr == '\0')
+		return (NULL);
+	while (ptr[i] != '\0' && i < n)
+	{
+		if (ptr[i] == c)
+			return ((void *) ptr + i);
+		i++;
+	}
+	return (NULL);
 }
-
 // int main () {
 //    const char str[] = "";
 //    const char ch = 'x';

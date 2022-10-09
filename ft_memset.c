@@ -1,33 +1,43 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/09 14:45:03 by pskrucha          #+#    #+#             */
+/*   Updated: 2022/10/09 14:45:03 by pskrucha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memset(void *str, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *str, int c, size_t n)
 {
-	char *ptr;
-	size_t i;
+	char	*ptr;
+	int		i;
 
 	i = 0;
 	ptr = (char *)str;
-	while(i < n)
+	if ((int)n < 1)
+	{
+		return (ptr);
+	}
+	while (i < (int)n)
 	{
 		ptr[i] = c;
 		i++;
 	}
-	return ((void *)ptr);
+	return (ptr);
 }
 
-int main () {
-   char str[50];
-   char str1[50];
-
-   strcpy(str,"Th");
-   strcpy(str1,"Th");
-   puts(str);
-   puts(str1);
-   memset(str,'$',2);
-   ft_memset(str1,'$',2);
-   puts(str);
-   puts(str1);
-   
-   return(0);
-}
+// int main ()
+// {
+//   char str[] = "almost every programmer should know memset!";
+//   memset (str,'-',1);
+//   puts (str);
+//   char str1[] = "almost every programmer should know memset!";
+//   ft_memset (str1,'-',1);
+//   printf("%s", str1);
+//   return 0;
+// }		DONE

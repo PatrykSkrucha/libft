@@ -6,11 +6,10 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:16:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/07 15:02:10 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/09 13:36:59 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strcpy(char *dest, char *src)

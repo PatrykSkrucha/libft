@@ -7,6 +7,8 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	char *src_ptr;
 	size_t i;
 
+
+	//	zrobic buffer z strdup 
 	src_ptr = (char *)src;
 	dest_ptr = (char *)dest;
 	i = 0;
@@ -15,6 +17,8 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 		dest_ptr[i] = src_ptr[i];
 		i++;
 	}
+
+	//tutaj free
 	return ((void *)dest_ptr);
 }
 
