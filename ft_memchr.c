@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:49:45 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/11 15:58:46 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 16:00:59 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	i = 0;
 	if (*ptr == '\0')
 		return (NULL);
-	while (ptr[i] != '\0' && i < n)
+	while (i < n)
 	{
 		if (ptr[i] == c)
 			return ((void *) ptr + i);
