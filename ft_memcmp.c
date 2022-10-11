@@ -6,11 +6,11 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:14:35 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/09 17:43:01 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 14:46:35 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
@@ -32,41 +32,43 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (s1[i] - s2[i]);
 }
 
-int main () {
-   char str1[15];
-   char str2[15];
-   int ret;
+// int main () {
+//    char str2[15];
+//    char str1[15];
+   // int ret;
 
-   char str11[15];
-   char str12[15];
-   int ret1;
-   memcpy(str1, "abcdef", 6);
-   memcpy(str2, "ABCDEF", 6);
+   // char str12[15];
+   // char str11[15];
+   // int ret1;
+   // memcpy(str1, "123456", 6);
+   // memcpy(str2, "ABCDEF", 6);
 
-   ret = memcmp(str1, str2, 5);
+   // ret = memcmp(str1, str2, 5);
+   // printf("%i\n", ft_memcmp(str2, str1, -1));
+   // printf("%i", memcmp(str2, str1, -1));
 
-   if(ret > 0) {
-      printf("str2 is less than str1");
-   } else if(ret < 0) {
-      printf("str1 is less than str2");
-   } else {
-      printf("str1 is equal to str2");
-   }
+   // if(ret > 0) {
+   //    printf("str2 is less than str1\n");
+   // } else if(ret < 0) {
+   //    printf("str1 is less than str2\n");
+   // } else {
+   //    printf("str1 is equal to str2\n");
+   // }
 
 
-   ft_memcpy(str11, "abcdef", 6);
-   ft_memcpy(str12, "ABCDEF", 6);
+   // ft_memcpy(str11, "abcdef", 6);
+   // ft_memcpy(str12, "ABCDEF", 6);
 
-   ret1 = ft_memcmp(str1, str2, 5);
+   // ret1 = ft_memcmp(str1, str2, 5);
 
-   if(ret1 > 0) {
-      printf("str12 is less than str11");
-   } else if(ret1 < 0) {
-      printf("str11 is less than str12");
-   } else {
-      printf("str11 is equal to str12");
-   }
+   // if(ret1 > 0) {
+   //    printf("str12 is less than str11");
+   // } else if(ret1 < 0) {
+   //    printf("str11 is less than str12");
+   // } else {
+   //    printf("str11 is equal to str12");
+   // }
    
-   return(0);
-}
-// 		DONE ???????
+//    return(0);
+// }
+// 		DONE 

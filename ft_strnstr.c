@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:52:17 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/08 16:51:35 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 14:34:45 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 		return ((char *)str);
 	while (str[i] != '\0')
 	{
-		while (str[i + j] == to_find[j] && str[i + j] != '\0' && i < len)
+		while (str[i + j] == to_find[j] && str[i + j] != '\0' && (int)i < (int)len)
 		{
-				printf("%zu", to_find_size);
 			j++;
 			to_find_size--;
 			if (to_find[j] == '\0' && !to_find_size)
@@ -40,11 +39,11 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	return (NULL);
 }
 
-int main()
-{
-	char str[] = "Hello";
-	char tofind[] = "llo";
-	size_t a = 3;
-	puts(ft_strnstr(str, tofind, a));
-	puts(strnstr(str, tofind, a));
-}
+// int main()
+// {
+// 	char str[] = "Hello";
+// 	char tofind[] = "llo";
+// 	size_t a = 3;
+// 	puts(ft_strnstr(str, tofind, a));
+// 	puts(strnstr(str, tofind, a));
+// }

@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:36:52 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/09 17:42:46 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 15:54:08 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	str = (const char *)s;
 	i = 0;
-	if ((int)n > 0 && (int)n <= (int)ft_strlen(str)+1)
+	if ((int)n > 0 && (int)n <= (int)ft_strlen(str))
 	{
 		while (i < n)
 		{
@@ -43,4 +43,4 @@ void	ft_bzero(void *s, size_t n)
 // 	printf("size po moj: %zu\n", ft_strlen(a1));
 // 	printf("OR po: %s\n", a);
 // 	printf("moj po: %s\n", a1);
-// }		DONE
+// }	

@@ -6,25 +6,11 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:16:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/09 13:36:59 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 15:03:09 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
 
 char	*ft_strdup(const char *src)
 
@@ -34,7 +20,7 @@ char	*ft_strdup(const char *src)
 	a = (char *)malloc(ft_strlen(src) + 1);
 	if (a == NULL)
 		return (NULL);
-	a = ft_strcpy(a, src);
+	a = ft_strlcpy(a, src, ft_strlen(src));
 	return (a);
 }
 // done
