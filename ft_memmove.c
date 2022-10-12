@@ -18,25 +18,43 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	char *src_ptr;
 	size_t i;
 
-
-	//	zrobic buffer z strdup 
 	src_ptr = (char *)src;
 	dest_ptr = (char *)dest;
 	i = 0;
-	while(i < n)
-	{
-		dest_ptr[i] = src_ptr[i];
-		i++;
-	}
 
-	//tutaj free
+	if( dest == NULL && src == NULL)
+		return (0);
+	if(src_ptr > dest_ptr)
+	{
+		while(i < n)
+		{
+			dest_ptr[i] = src_ptr[i];
+			i++;
+		}
+	}
+	else
+	{
+		while(n)
+		{		
+			n--;
+			dest_ptr[n] = src_ptr[n];
+		}
+	}
+		
+
 	return ((void *)dest_ptr);
 }
 
 // int main()
 // {
-// 	char a[] = "abcde";
-// 	puts(a);
+// 	char a[] = "abcd";
+// 	char a1[] = "abcd";
+// 	// char b[] = "abcde";
+// 	// char b1[] = "abcde";
+// 	printf("before: %s\n", a);
+// 	ft_memmove(a1, a1+2, 3);
 // 	memmove(a, a+2, 3);
-// 	puts(a);
+// 	printf("or: %s\n", a);
+// 	printf("mine: %s\n", a1);
+
 // }

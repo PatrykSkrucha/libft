@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:52:17 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/11 14:34:45 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 18:46:31 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	to_find_size = ft_strlen(to_find);
 	i = 0;
 	j = 0;
-	if (to_find[j] == '\0')
+	if (to_find[j] == '\0' || len == 0)
 		return ((char *)str);
 	while (str[i] != '\0')
 	{

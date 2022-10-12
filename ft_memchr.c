@@ -6,11 +6,11 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:49:45 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/11 16:00:59 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/11 16:13:57 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {

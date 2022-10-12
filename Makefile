@@ -15,6 +15,7 @@ NAME = libft.a
 		 ft_strlcat \
 		 ft_strchr \
 		 ft_strnstr \
+		 ft_strdup  \
 		 ft_strncmp \
 		 ft_atoi \
 		 ft_isalpha \
@@ -24,6 +25,7 @@ NAME = libft.a
 		 ft_isprint \
 		 ft_toupper \
 		 ft_tolower \
+		 ft_calloc \
 
  SRCS_DIR = ./
  SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
