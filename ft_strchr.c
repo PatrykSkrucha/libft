@@ -6,42 +6,82 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:15:11 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/11 18:56:52 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/12 15:16:22 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_strchr(const char *str, int c)
+// void *ft_strchr(const char *str, int c)
+// {
+// 	size_t		i;
+// 	int x;
+
+// 	i = 0;
+// 	x = 0;
+
+// 	while (*(str + i) != c)
+// 	{
+// 		if (str[i] == c)
+// 			return ((void *) str + i);
+// 		i++;
+// 	}
+
+// 		return (NULL);
+
+// }
+
+char *ft_strchr(const char *str, int c)
 {
 	size_t		i;
-	const char	*ptr;
+	// const char	*ptr;
 
-	ptr = (char *)str;
+	// ptr = (char *)str;
 	i = 0;
-	if (*ptr == '\0')
-		return (NULL);
-	while (ptr[i] != '\0')
+	// if (*str == '\0' && c != '\0')
+	// 	return (NULL);
+	if(c == '\0')
 	{
-		if (ptr[i] == c)
-			return ((void *) ptr + i);
+		while(*str)
+		{
+			str++;
+		}
+		return ((char *)str);
+	}
+	while (str[i] != '\0')
+	{
+		if (str[i] == c)
+			return ((char *) str + i);
 		i++;
 	}
 	return (NULL);
 }
 
-int main () {
-	// const char str[] = "http://www.tutorialspoint.com";
-	// const char ch = '.';
-	// const char str1[] = "http://www.tutorialspoint.com";
-	// const char ch = '.';
-	// char *ret;
+// void ft_funk(char *str)
+// {
+// 	int i = 0;
+// 	while(*str + i)
+// 	{
+// 		printf("jest");
+// 		i++;
+// 	}
+// }
 
-	// ret = strchr(str, ch);
+// int main () {
+// 	const char str[] = "http://www.tutorialspoint.com";
+// 	const char ch = '\0';
+// 	const char str1[] = "http://www.tutorialspoint.com";
+// 	const char ch1 = '\0';
+// 	char *ret;
+// 	char *ret1;
 
-	// printf("String after |%c| is - |%s|\n", ch, ret);
-	char a[] = "Jel\0o";
-	printf("%zu", ft_strlen(a));
+// 	ret = strchr(str, ch);
+// 	ret1 = ft_strchr(str1, ch1);
+
+// 	printf("String after |%c| is - |%s|\n", ch, ret);
+// 	printf("String after |%c| is - |%s|\n", ch1, ret1);
 	
-	return(0);
-}
+	
+	
+// 	return(0);
+// }
