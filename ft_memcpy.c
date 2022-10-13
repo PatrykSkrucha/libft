@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:19:11 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/11 15:53:42 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/13 12:28:12 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *destination, const void *source, size_t num)
 
 	dest = (char *)destination;
 	src = (const char *)source;
-	if( dest == NULL && src == NULL)
+	if (dest == NULL && src == NULL)
 		return (0);
 	while (num)
 	{
