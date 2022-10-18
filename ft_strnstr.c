@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:52:17 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/15 20:12:52 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:59:56 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 				return ((char *)str + i);
 		}
 		i++;
-		j = 0;
+		j = 0;	
 	}
 	return (NULL);
 }
