@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:17:46 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/15 20:57:22 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:49:17 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dst)
 		i = (int)ft_strlen(dst);
-	if (i == 0)
-		return (ft_strlen(src));
 	x = i;
 	if ((int)dstsize <= i)
 		return (ft_strlen(src) + dstsize);
@@ -39,6 +37,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i] = '\0';
 	}
+	if ((int)dstsize > j)
+		return (ft_strlen(src) + x);
 	return (ft_strlen(src) + ft_strlen(dst));
 }
 
