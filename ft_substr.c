@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:54:31 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/15 18:54:13 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:19:26 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 	char	*str;
 
+	if (!s)
+		return (NULL);
 	str = (char *)s;
 	i = ft_strlen(s + start);
 	if (start >= (unsigned int)ft_strlen(str))

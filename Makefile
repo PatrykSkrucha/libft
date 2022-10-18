@@ -29,7 +29,6 @@ NAME = libft.a
 		 ft_strrchr \
 		 ft_substr \
 		 ft_strjoin \
-		 ft_strtrim \
 		 ft_putchar_fd \
 		 ft_strmapi \
 

@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 17:02:42 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/17 18:34:50 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:17:51 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	if (s1 == NULL)
-		s2_len = ft_strlen(s2);
+		return (ft_strdup(s2));
 	if (s2 == NULL)
-		s1_len = ft_strlen(s1);
-	else
-	{
-		s1_len = ft_strlen(s1);
-		s2_len = ft_strlen(s2);
-	}
+		return (ft_strdup(s1));
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
 	str = (char *)malloc(s1_len + s2_len);
 	if (str == NULL)
 		return (NULL);
