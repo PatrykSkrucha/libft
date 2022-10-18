@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:59:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/06 15:29:52 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:01:34 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,20 @@ int	ft_atoi(const char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\v'
 		|| *str == '\n' || *str == '\f' || *str == '\r')
 		str++;
-	if (*str == '-')
-		sign++;
-	str++;
+	if (*str == '-' || *str == '+')
+	{
+		if(*str == '-')
+			sign++;
+		str++;
+	}
 	while (*str != '\0' && *str >= '0' && *str <= '9')
 	{
 		number = number * 10 + *str - '0';
 		str++;
 	}
 	if (sign % 2)
-		return (number * -1);
-	else
-		return (number);
+		return (-number);
+	return (number);
 }
 
 // DONE
