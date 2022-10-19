@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:51:23 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/18 20:35:45 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:18:00 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,28 +43,31 @@ char *ft_itoa(int n)
 {
 	int	s;
 	char *str = "aa";
+	int sign;
 
 	s = str_size(n);
+
 	str = (char *) malloc(s);
+	if(str == NULL)
+		return (NULL);
+	sign = 0;
 	s--;
 	str[s] = '\0';
-	if(n > 0)
-	{
-		while(n > 0)
-		{	
-			s--;
-			str[s] = n %10 + '0';
-			n /= 10;
-		}
-	}
 	if(n < 0)
 	{
-		while(n < 0)
-		{	
-			s--;
-			str[s] = n %10 + '0';
-			n /= 10;
-		}
+		n *= -1;
+		sign++;
+	}
+	while(n > 0)
+	{	
+		s--;
+		str[s] = n %10 + '0';
+		n /= 10;
+	}
+	if(sign)
+	{
+		s--;
+		str[s] = '-';
 	}
 	if (n == 0)
 	{
@@ -74,7 +77,9 @@ char *ft_itoa(int n)
 	return (str);
 }
 
-// int main()
-// {
-// 	ft_itoa(20);
-// }
+int main()
+{
+	char *s = ft_itoa(2);
+	puts(s);
+	free(s);
+}
