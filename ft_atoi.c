@@ -6,9 +6,11 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:59:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/18 13:01:34 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:10:40 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -22,7 +24,7 @@ int	ft_atoi(const char *str)
 		str++;
 	if (*str == '-' || *str == '+')
 	{
-		if(*str == '-')
+		if (*str == '-')
 			sign++;
 		str++;
 	}

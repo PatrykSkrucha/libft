@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:40:07 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/19 16:29:10 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:10:12 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	move_start(char const *s1, char const *set, int start)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[start] && set[i])
@@ -23,16 +23,16 @@ int	move_start(char const *s1, char const *set, int start)
 		{
 			i = 0;
 			start++;
-			return (1);	
+			return (1);
 		}
 		i++;
 	}
 	return (0);
 }
 
-int move_end(char const *s1, char const *set, int end)
+int	move_end(char const *s1, char const *set, int end)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[end] && set[i])
@@ -41,28 +41,28 @@ int move_end(char const *s1, char const *set, int end)
 		{
 			i = 0;
 			end--;
-			return (1);	
+			return (1);
 		}
 		i++;
 	}
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int start;
-	int end;
+	int		start;
+	int		end;
 
 	if (!s1 || !set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while(move_start(s1, set, start))
+	while (move_start(s1, set, start))
 	{
 		start++;
 	}
-	while(move_end(s1, set, end))
+	while (move_end(s1, set, end))
 	{
 		end--;
 	}
