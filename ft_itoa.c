@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:51:23 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/19 13:55:05 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:05:49 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,6 @@ void	extra_one(int n, int sign, char *str, int s)
 		s--;
 		str[s] = '-';
 	}
-	if (n == 0)
-	{
-		s--;
-		str[s] = '0';
-	}
 }
 
 char	*ft_itoa(int n)
@@ -70,6 +65,8 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		sign;
 
+	if (n == 0)
+		return (ft_strdup("0"));
 	s = str_size(n);
 	str = (char *) malloc(s);
 	if (str == NULL)
@@ -88,6 +85,7 @@ char	*ft_itoa(int n)
 
 // int main()
 // {
-// 	char *s = ft_itoa(-2147483648);
+// 	char *s = ft_itoa(1000034);
 // 	puts(s);
+// 	free(s);
 // }
