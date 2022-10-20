@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:54:31 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/18 13:19:26 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/20 14:49:34 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (s[0] == '\0' || len == 0)
+		return (ft_strdup(""));
 	str = (char *)s;
+	if ((start > ft_strlen(str)))
+		return (ft_strdup(""));
 	i = ft_strlen(s + start);
-	if (start >= (unsigned int)ft_strlen(str))
-	{
-		ptr = ft_calloc(1, 1);
-		return (ptr);
-	}
 	if (i < len)
 		len = i;
 	ptr = ft_calloc(len + 1, 1);
@@ -38,8 +37,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main()
 // {
-//     const char *s = "He";
-//     char *a = ft_substr(s, 3, 2);
+//     // const char *s = "He";
+//     char *a = ft_substr("hola", 4294967295, 18446744073709551615);
 //     printf("%s", a);
 // 	free(a);
 // }
