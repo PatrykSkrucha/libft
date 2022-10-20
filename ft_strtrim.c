@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:40:07 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/19 17:10:12 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/20 14:31:29 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
+	if (s1[0] == '\0')
+		return (ft_strdup(""));
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (move_start(s1, set, start))
@@ -66,7 +68,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		end--;
 	}
-	if (start > end + 1)
+	if (start >= end + 1)
 		return (ft_strdup(""));
 	str = ft_substr(s1, start, end - start + 1);
 	return (str);
@@ -76,5 +78,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 // {
 // 	char const *s1 = "HaeH";
 // 	char const *set = "He";
-// 	puts(ft_strtrim(s1, set));
+// 	char *s2 = ft_strtrim("", "");
+// 	puts(s2);
 // }
