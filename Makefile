@@ -31,6 +31,13 @@ NAME = libft.a
 		 ft_strjoin \
 		 ft_putchar_fd \
 		 ft_strmapi \
+		 ft_putstr_fd \
+		 ft_putendl_fd \
+		 ft_putnbr_fd \
+		 ft_striteri \
+		 ft_itoa \
+		 ft_strtrim \
+		 ft_split \
 
  SRCS_DIR = ./
  SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

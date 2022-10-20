@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 17:02:42 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/18 13:17:51 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:17:31 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	str = (char *)malloc(s1_len + s2_len);
+	str = (char *)malloc(s1_len + s2_len + 1);
 	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, s1, s1_len + 1);
@@ -42,5 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // 	char const *s2 = "world!";
 // 	char *s3 = ft_strjoin(s1, s2);
 // 	puts(s3);
+// 	printf("%zu", ft_strlen(s3));
+// 	free(s3);
 // 	return (0);
 // }
