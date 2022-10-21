@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:37:30 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/21 14:57:24 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/21 18:44:03 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,79 +37,91 @@ int	count_words(char const *s1, char c)
 	return (counter);
 }
 
-int count_position(char const *s1, char c, int i, int start_or_end)
+unsigned int count_position(char const *s1, char c, int i, int start_or_end)
 {
-
-
 	while (s1[i])
 	{
 		if(start_or_end)
 		{
 			if (s1[i] != c)
 				return (i);
-			i++;
 		}
 		else
 		{
 			if (s1[i] == c)
 				return (i);
-			i++;
 		}
+			i++;
 	}
+	if(!start_or_end)
+		return (ft_strlen(s1));
+	return (0);
 }
 
-// char **ft_split(char const *s, char c)
-// {
-// 	char **str;
-// 	int words;
-// 	int start;
-// 	int end;
+void clearall(char **s, int i)
+{
+	while (i >= 0)
+	{
+		free(s[i]);
+		i--;
+	}
+	free(s);
+}
 
-// 	if (!s)
-// 		return (NULL);
-// 	start = 0;
-// 	end = 0;
-// 	words = count_words(s, c);
-// 	str = (char **) malloc(words + 1);
-// 	if (!str)
-// 		return (NULL);
-// 	start = count_position(s, c, start, 1);
-// 	end = count_position(s, c, start, 0);
-	
-// 	return (str);
-// }
-
-char **dummy(char const *s, char c)
+char **ft_split(char const *s, char c)
 {
 	char **str;
 	int words;
-	int start;
-	int end;
+	unsigned int start;
+	unsigned int end;
+	int i;
 
-	if (!s)
-		return (NULL);
+	if (!s || c == '\0')
+	{
+		str = malloc(1);
+		str[0] = NULL;
+		return (str);
+	}
+	i = 0;
 	start = 0;
 	end = 0;
 	words = count_words(s, c);
-	str = (char **) malloc(words + 1);
+	if (!words)
+		return (NULL);
+	str =(char **) malloc(sizeof(char*) * words + 1);
 	if (!str)
 		return (NULL);
-	while (words)
+	while (i < words)
 	{
 		start = count_position(s, c, end, 1);
 		end = count_position(s, c, start, 0);
-		printf("start: %i\nend: %i\n", start, end);
-		words--;
+		str[i] = (char *)malloc(sizeof(char*) * end - start + 1);
+		if (!str[i])
+		{
+			clearall(str, i - 1);
+			return (NULL);
+		}
+		str[i] = ft_substr(s, start, end - start);
+		i++;
 	}
-	free(str);
+	str[i] = NULL;	
 	return (str);
 }
 
-int main ()
-{
-	char *string = "      split       this for   me  !       ";
-// 	char **expected = ((char*[6]){"split", "this", "for", "me", "!", ((void *)0)});
-// 	char **result = ft_split(string, ' ');
-	dummy(string, ' ');
-	
-}
+// int main ()
+// {
+// char **s = ft_split("\0aa\0bbb", '\0');
+// // int i = 0;
+// // while (s[i])
+// // {
+// // 	printf("%s\n", s[i]);
+// // 	i++;
+// // }
+// if (s[0] == NULL)
+// 	printf("ss");
+// else
+// 	printf("nn");
+// free(s);
+// }
+
+//gcc -Wall -Werror -Wextra ft_split.c ft_strlen.c ft_substr.c ft_strdup.c ft_calloc.c ft_strlcpy.c ft_bzero.c ft_memset.c && ./a.out
