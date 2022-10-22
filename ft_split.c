@@ -6,13 +6,13 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:37:30 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/21 18:44:03 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/22 17:07:57 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s1, char c)
+static int	count_words(char const *s1, char c)
 {
 	int	i;
 	int counter;
@@ -37,7 +37,7 @@ int	count_words(char const *s1, char c)
 	return (counter);
 }
 
-unsigned int count_position(char const *s1, char c, int i, int start_or_end)
+static unsigned int count_position(char const *s1, char c, int i, int start_or_end)
 {
 	while (s1[i])
 	{
@@ -58,7 +58,7 @@ unsigned int count_position(char const *s1, char c, int i, int start_or_end)
 	return (0);
 }
 
-void clearall(char **s, int i)
+static void clearall(char **s, int i)
 {
 	while (i >= 0)
 	{
@@ -76,51 +76,47 @@ char **ft_split(char const *s, char c)
 	unsigned int end;
 	int i;
 
-	if (!s || c == '\0')
+	if (!s)
 	{
-		str = malloc(1);
-		str[0] = NULL;
-		return (str);
+		return (NULL);
 	}
 	i = 0;
 	start = 0;
 	end = 0;
 	words = count_words(s, c);
-	if (!words)
-		return (NULL);
-	str =(char **) malloc(sizeof(char*) * words + 1);
+	str =(char **) malloc((sizeof(char*) * words) + 1);
 	if (!str)
 		return (NULL);
 	while (i < words)
 	{
 		start = count_position(s, c, end, 1);
 		end = count_position(s, c, start, 0);
-		str[i] = (char *)malloc(sizeof(char*) * end - start + 1);
+		str[i] = ft_substr(s, start, end - start);
 		if (!str[i])
 		{
-			clearall(str, i - 1);
+			clearall(str, i);
 			return (NULL);
 		}
-		str[i] = ft_substr(s, start, end - start);
 		i++;
 	}
-	str[i] = NULL;	
+	str[i] = 0;	
 	return (str);
 }
 
 // int main ()
 // {
-// char **s = ft_split("\0aa\0bbb", '\0');
-// // int i = 0;
-// // while (s[i])
-// // {
-// // 	printf("%s\n", s[i]);
-// // 	i++;
-// // }
-// if (s[0] == NULL)
-// 	printf("ss");
+// char **s = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+// int i = 0;
+// while (s[i])
+// {
+// 	printf("%s\n", s[i]);
+// 	i++;
+// }
+// if (s[1] == NULL)
+// 	printf("true");
 // else
-// 	printf("nn");
+// 	printf("fail");
+
 // free(s);
 // }
 
