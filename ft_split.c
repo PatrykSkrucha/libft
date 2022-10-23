@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:37:30 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/22 17:07:57 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:16:59 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char **ft_split(char const *s, char c)
 	start = 0;
 	end = 0;
 	words = count_words(s, c);
-	str =(char **) malloc((sizeof(char*) * words) + 1);
+	str =(char **) malloc((words + 1) * sizeof(char*));
 	if (!str)
 		return (NULL);
 	while (i < words)
@@ -105,17 +105,17 @@ char **ft_split(char const *s, char c)
 
 // int main ()
 // {
-// char **s = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
-// int i = 0;
-// while (s[i])
-// {
-// 	printf("%s\n", s[i]);
-// 	i++;
-// }
-// if (s[1] == NULL)
-// 	printf("true");
-// else
-// 	printf("fail");
+// char **s = ft_split("hello", 32);
+// // int i = 0;
+// // while (s[i])
+// // {
+// // 	printf("%s\n", s[i]);
+// // 	i++;
+// // }
+// // if (s[1] == NULL)
+// // 	printf("true");
+// // else
+// // 	printf("fail");
 
 // free(s);
 // }
