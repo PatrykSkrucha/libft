@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:37:30 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/23 13:16:59 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:17:45 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char **ft_split(char const *s, char c)
 	start = 0;
 	end = 0;
 	words = count_words(s, c);
-	str =(char **) malloc((words + 1) * sizeof(char*));
+	str =(char **) malloc((sizeof(char*) * words) + 1);
 	if (!str)
 		return (NULL);
 	while (i < words)
