@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:40:07 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/20 14:31:29 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:59:56 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	move_start(char const *s1, char const *set, int start)
 		if (s1[start] == set[i])
 		{
 			i = 0;
-			start++;
 			return (1);
 		}
 		i++;
@@ -76,8 +75,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main()
 // {
-// 	char const *s1 = "HaeH";
-// 	char const *set = "He";
+// 	char const *s1 = "      Hello     ";
+// 	char const *set = " ";
 // 	char *s2 = ft_strtrim("", "");
 // 	puts(s2);
 // }
