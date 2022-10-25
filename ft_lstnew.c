@@ -6,13 +6,13 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:55:41 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/24 15:45:52 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/25 19:39:49 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
 
