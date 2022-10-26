@@ -6,19 +6,17 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:51:23 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/20 15:05:49 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:13:23 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	str_size(int n)
+static int	str_size(int n)
 {
 	int	i;
 
-	i = 1;
-	if (n == 0)
-		return (2);
+	i = 0;
 	if (n > 0)
 	{
 		while (n >= 1)
@@ -39,7 +37,7 @@ int	str_size(int n)
 	return (i);
 }
 
-void	extra_one(int n, int sign, char *str, int s)
+static void	create_string(int n, int sign, char *str, int s)
 {
 	if (n < 0)
 	{
@@ -67,8 +65,8 @@ char	*ft_itoa(int n)
 
 	if (n == 0)
 		return (ft_strdup("0"));
-	s = str_size(n);
-	str = (char *) malloc(s);
+	s = str_size(n) + 1;
+	str = (char *) malloc((s));
 	if (str == NULL)
 		return (NULL);
 	sign = 0;
@@ -79,13 +77,6 @@ char	*ft_itoa(int n)
 	}
 	s--;
 	str[s] = '\0';
-	extra_one(n, sign, str, s);
+	create_string(n, sign, str, s);
 	return (str);
 }
-
-// int main()
-// {
-// 	char *s = ft_itoa(1000034);
-// 	puts(s);
-// 	free(s);
-// }
