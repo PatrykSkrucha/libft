@@ -40,25 +40,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return ((void *)dest_ptr);
 }
-
-// void funk()
-// {
-// 	int i = 0;
-// 	while(i++<3)
-// 		printf("Hello");
-// }
-
-// int main()
-// {
-	// char a[] = "abcd";
-	// char a1[] = "abcd";
-	// // char b[] = "abcde";
-	// // char b1[] = "abcde";
-	// printf("before: %s\n", a);
-	// ft_memmove(a1, a1+2, 3);
-	// memmove(a, a+2, 3);
-	// printf("or: %s\n", a);
-	// printf("mine: %s\n", a1);
-// 	funk();
-
-// }

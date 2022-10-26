@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:37:30 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/23 13:35:46 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:42:41 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,20 +108,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (str);
 }
-
-// int main ()
-// {
-// char **s = ft_split("hello", 32);
-// // int i = 0;
-// // while (s[i])
-// // {
-// // 	printf("%s\n", s[i]);
-// // 	i++;
-// // }
-// // if (s[1] == NULL)
-// // 	printf("true");
-// // else
-// // 	printf("fail");
-
-// free(s);
-// }

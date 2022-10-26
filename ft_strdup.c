@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:16:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/14 14:01:17 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:02:52 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,3 @@ char	*ft_strdup(const char *src)
 	ft_strlcpy(a, src, ft_strlen(src) + 1);
 	return (a);
 }
-
-// done
-
-// int main()
-// {
-// 	char a[] = "Hello";
-// 	char *b = ft_strdup(a);
-// 	puts(b);
-// 	free(b);
-// 	return (0);
-// }

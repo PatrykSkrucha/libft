@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:02:08 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/20 16:24:42 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:42:14 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//    const char str[] = "http://www.tutorialspoint.com";
-//    const char ch = '.';
-//    char *ret;
-//    const char str1[] = "http://www.tutorialspoint.com";
-//    const char ch1 = '.';
-//    char *ret1;
-
-//    ret = strrchr(str, ch);
-//    ret1 = ft_strrchr(str1, ch1);
-
-//    printf("String after or |%c| is - |%s|\n", ch, ret);
-//    printf("String after mi |%c| is - |%s|\n", ch1, ret1);
-//    return(0);
-
-// }

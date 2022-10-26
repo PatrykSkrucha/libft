@@ -30,14 +30,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return ((void *)ptr);
 }
-
-// int main ()
-// {
-//   char str[] = "almost every programmer should know memset!";
-//   memset (str,'-',1);
-//   puts (str);
-//   char str1[] = "almost every programmer should know memset!";
-//   ft_memset (str1,'-',1);
-//   printf("%s", str1);
-//   return 0;
-// }		DONE

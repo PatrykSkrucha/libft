@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:47:28 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/15 20:40:49 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 10:59:56 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,3 @@ void	*ft_calloc(size_t nelem, size_t elsize)
 	ft_bzero(a, nelem * elsize);
 	return (a);
 }
-
-// int main () {
-// 	int size = 8539;
-
-	// void * d1 = ft_calloc(SIZE_MAX, SIZE_MAX);
-// 	void * d2 = calloc(size, sizeof(int));
-// 	if (memcmp(d1, d2, size * sizeof(int)) == 0)
-// 		printf("sukces");
-// 	else
-// 		printf("fial");
-// 	free(d1);
-// 	free(d2);
-// 	if(d1 == NULL)
-// 		printf("sukces");
-// 	else
-// 		printf("fial");
-//    return(0);
-// }

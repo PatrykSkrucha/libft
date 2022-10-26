@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:19:11 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/18 16:09:39 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:21:35 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,3 @@ void	*ft_memcpy(void *destination, const void *source, size_t num)
 	}
 	return (dest);
 }
-
-// int main()
-// {
-// 	// char a[] = "";
-// 	char a1[] = "255668";
-// 	// puts(a);
-// 	puts(a1);
-// 	// memcpy(a+4, a+3, 0);
-// 	memcpy(a1, ((void *)0), 3);
-// 	// puts(a);
-// 	puts(a1);
-// }
-
-//DONE 

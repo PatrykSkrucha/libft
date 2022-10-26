@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:49:43 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/11 16:17:13 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:03:13 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (counter);
 }
-// done

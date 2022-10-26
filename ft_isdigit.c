@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:40:23 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/06 15:41:48 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:00:32 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,3 @@ int	ft_isdigit(int a)
 	else
 		return (0);
 }
-// done

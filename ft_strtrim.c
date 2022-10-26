@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:40:07 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/25 18:59:56 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:14:48 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int	move_end(char const *s1, char const *set, int end)
 		if (s1[end] == set[i])
 		{
 			i = 0;
-			end--;
 			return (1);
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:37:21 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/06 15:32:53 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:00:22 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-// DONE

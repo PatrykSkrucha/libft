@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:59:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/19 17:10:40 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 10:59:39 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,3 @@ int	ft_atoi(const char *str)
 		return (-number);
 	return (number);
 }
-
-// DONE

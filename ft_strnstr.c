@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:52:17 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/19 17:11:39 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:03:24 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-	// char haystack[30] = "aaabcabcd";
-	// char needle[10] = "aabc";
-	// char *s1 = "oh no not the empty string !";
-	// char *s2 = "";
-	// size_t max = -1;
-	// char *i1 = strnstr(s1, s2, max);
-	// char *i2 = ft_strnstr(s1, s2, max);
-	// puts(i1);
-	// puts(i2);
-// 	printf("%s",ft_strnstr(((void *)0), "fake", 3));
-// }

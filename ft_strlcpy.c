@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:43:59 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/13 13:12:59 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:03:08 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (x);
 }
-// done
-
-// int main()
-// {
-// 	char a[] = "Hello";
-// 	ft_strlcpy(a, a+2, 2);
-// 	puts(a);
-// }

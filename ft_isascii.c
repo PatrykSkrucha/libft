@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:52:29 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/06 15:37:37 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:00:29 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-// DONE
