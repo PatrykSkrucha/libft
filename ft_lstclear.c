@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 13:59:50 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/26 13:18:30 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/29 16:08:53 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
 
-	if(!lst)
+	if (!lst)
 		return ;
 	while (*lst)
 	{
