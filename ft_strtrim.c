@@ -6,37 +6,20 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:40:07 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/26 11:14:48 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/30 12:22:02 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	move_start(char const *s1, char const *set, int start)
+static int	move_pointer(char const *s1, char const *set, int index)
 {
 	int	i;
 
 	i = 0;
-	while (s1[start] && set[i])
+	while (s1[index] && set[i])
 	{
-		if (s1[start] == set[i])
-		{
-			i = 0;
-			return (1);
-		}
-		i++;
-	}
-	return (0);
-}
-
-int	move_end(char const *s1, char const *set, int end)
-{
-	int	i;
-
-	i = 0;
-	while (s1[end] && set[i])
-	{
-		if (s1[end] == set[i])
+		if (s1[index] == set[i])
 		{
 			i = 0;
 			return (1);
@@ -58,11 +41,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	while (move_start(s1, set, start))
+	while (move_pointer(s1, set, start))
 	{
 		start++;
 	}
-	while (move_end(s1, set, end))
+	while (move_pointer(s1, set, end))
 	{
 		end--;
 	}
@@ -71,11 +54,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, end - start + 1);
 	return (str);
 }
-
-// int main()
-// {
-// 	char const *s1 = "      Hello     ";
-// 	char const *set = " ";
-// 	char *s2 = ft_strtrim("", "");
-// 	puts(s2);
-// }

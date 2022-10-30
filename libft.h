@@ -6,16 +6,14 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:15:45 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/24 15:33:09 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/30 12:16:20 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-# include <stdio.h>
-# include <ctype.h>
+# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 

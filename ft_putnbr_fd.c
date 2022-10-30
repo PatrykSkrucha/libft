@@ -6,7 +6,7 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:53:10 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/18 17:08:26 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/30 12:07:40 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n == -2147483648)
 	{
-		write(fd, "-", 1);
-		write(fd, "2", 1);
-		ft_putnbr_fd(147483648, fd);
+		write(fd, "-2147483648", 11);
 	}
 	else if (n < 0)
 	{
