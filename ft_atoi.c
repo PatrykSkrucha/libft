@@ -6,11 +6,9 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 12:59:13 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/26 10:59:39 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/30 11:57:22 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

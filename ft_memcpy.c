@@ -6,11 +6,11 @@
 /*   By: pskrucha <pskrucha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 13:19:11 by pskrucha          #+#    #+#             */
-/*   Updated: 2022/10/26 11:21:35 by pskrucha         ###   ########.fr       */
+/*   Updated: 2022/10/30 12:00:47 by pskrucha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *destination, const void *source, size_t num)
 {
